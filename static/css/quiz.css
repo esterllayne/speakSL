@@ -1,19 +1,40 @@
 .LetterImg {
   width:200px;
-
+  height:200px;
   display:block;
   border: 10px solid black;
   margin-right: 10px;
   margin-left: 10px;
-  margin-bottom: 100px;
-  width=200;
+  margin-top: 10px;
+  margin-bottom: 5px;
   horizontal-align: middle;
   text-align:center;
 }
 
-
-
-
 .highl{
-  color:blue;
+  color:brown;
 }
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+.AnswerField {
+  position: relative; 
+  top: 2px; bottom:20px; 
+  left: 20px; 
+  right: 20px;
+}
+
+
+li {
+  display: inline;
+  padding: 0px 7px 0px 7px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+
+
