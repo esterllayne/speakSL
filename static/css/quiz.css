@@ -1,16 +1,19 @@
-.img-responsive {
-  display: block;
-  height: auto;
-  max-width: 100%;
+.LetterImg {
+  width:200px;
+
+  display:block;
+  border: 10px solid black;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+  width=200;
+  horizontal-align: middle;
+  text-align:center;
 }
 
 
-.imgQuiz {
-        border: 10px solid black;
-        border-radius: 12px;
-        margin-top: 0px;
-        margin-left: 20px;
-        margin-right: 30px;
-        margin-bottom: 30px;
-        vertical-align: middle;
-  }
+
+
+.highl{
+  color:blue;
+}

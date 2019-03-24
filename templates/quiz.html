@@ -2,23 +2,28 @@
 
 <head>
 
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}"> 
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/quiz.css') }}"> 
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}"> 
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap.css') }}">   
         <title>Speak Sign Language</title>
 
 </head>
 
 <body>
-        <h1>Quiz</h1>
+        <div class='highl'>
+                
+        <h1> Quiz</h1>
+        </div>
+
         <h2>How well do you know the sign alphabet?</h2>
 
-
-
         <form style="position: relative;">
-                <img src="https://i.imgur.com/z6mV6kx.jpg"  class='imgQuiz' width=100 />
-                <div style="position: absolute; left: 0px; top: 0px;"> 
-                   Input here... <input type="text" /><br />
-                   <button type="submit">Send</button>
+                <img  class="LetterImg" src="https://i.imgur.com/z6mV6kx.jpg" >
+                <div style="position: absolute; left: 20px; top: 200px;">    
+                         <input type="text" id="Q2" name="Q2" required="required"/>
                 </div>
-            </div>
+                <img  class="LetterImg" src="https://i.imgur.com/poJ34P8.jpg" >
+                <div style="position: absolute; left: 20px; top: 600px;"> 
+                        <input type="text" id="Q2" name="Q2" required="required"/><br/>I am done
+                        <button type="submit">Send</button><br />
+                </div>
 </body>
