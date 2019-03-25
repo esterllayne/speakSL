@@ -12,12 +12,13 @@
 }
 
 .highl{
-  color:red;
+  color:blue;
 }
 
 .content {
   max-width: 500px;
   margin: 0 auto;
+  background: rgba(243, 254, 248, 1);
 }
 
 
@@ -28,14 +29,16 @@
   right: 20px;
 }
 
-img.bg {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
+header {
+  padding: 0 0 0  0;
+  text-align: center;
+  background-image: url("https://i.imgur.com/YH4cJhg.jpg");
+  color: #000;
+  height: 300px;
+  background-size: cover;
+}
+body {
+  background: rgba(243, 254, 248, 1);
 }
 
 li {
