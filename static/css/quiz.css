@@ -12,7 +12,7 @@
 }
 
 .highl{
-  color:blue;
+  color:orangered;
 }
 
 .content {
@@ -29,15 +29,14 @@
 }
 
 header {
-  padding: 0 0 0  0;
   text-align: center;
   background-image: url("https://i.imgur.com/HnGwjwe.jpg");
   background-size: cover;
-  margin-bottom: 55px;
-  line-height: 30px;
+  line-height: 50px;
+  height: 60px;
 }
 body {
-  background: rgb(156, 235, 191);
+  background: rgb(181, 235, 205);
 }
 
 li {
