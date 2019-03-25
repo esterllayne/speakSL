@@ -10,7 +10,7 @@ def evaluate_score(ansUsr,ansCorrect):
     for i in range(len(ansUsr)):
        if ansUsr[i].lower()==ansCorrect[i]:
            score=score+1
-    percentSc=100*score/len(corrects)
+    percentSc=round(100*score/len(corrects))
     scoreL=[score,percentSc]
     return  scoreL
 
