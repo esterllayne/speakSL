@@ -4,7 +4,9 @@ import requests
 
 
 app=Flask("AppSL")
+
 corrects=['y','l','o','d','i','b']
+
 def evaluate_score(ansUsr,ansCorrect):
     score=0
     for i in range(len(ansUsr)):
@@ -37,6 +39,5 @@ def returnhome():
     send_simple_message(sendTo_mail=form_data["email"],sendTo_name=form_data["name"])
     return render_template("programming.html",v_email=v_email)
 
-
-
-app.run(debug=True)
+if "AppSL" == '__main__':
+    app.run()
