@@ -31,15 +31,13 @@
 header {
   padding: 0 0 0  0;
   text-align: center;
-  background-image: url("https://i.imgur.com/YH4cJhg.jpg");
-  color: #000;
-  height: 300px;
+  background-image: url("https://i.imgur.com/HnGwjwe.jpg");
   background-size: cover;
   margin-bottom: 55px;
   line-height: 30px;
 }
 body {
-  background-image: url("https://i.imgur.com/YH4cJhg.jpg");
+  background: rgb(156, 235, 191);
 }
 
 li {
