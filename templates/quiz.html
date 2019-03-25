@@ -21,29 +21,38 @@
       <li><a href="/research"> <b>Basic phrasis</b> </a></li>
       <li><a href="/programming"><b>Quiz</b> </a></li>
     </ul>
-    <div class='highl'> <h1> Quiz</h1></div>
-    <h2>How well do you know the sign alphabet?</h2>    
-    <p>Which letter is it? Fill in below each picture</p>    
+
 </div>
 </header>
 
 <body class ='content'>
 
-        <form >
-                <img  id = 'y' class="LetterImg" src="https://i.imgur.com/z6mV6kx.jpg" >
-                   <div class="AnswerField">     <input type="text" id="Q2" name="Q2" required="required"/> </div>
-                <img  id = 'l' class="LetterImg" src="https://i.imgur.com/poJ34P8.jpg" >
-                   <div class="AnswerField">     <input type="text" id="Q2" name="Q2" required="required"/> </div>
-                <img  id = 'o' class="LetterImg" src="https://i.imgur.com/e0hBJ2h.jpg" >
-                   <div class="AnswerField">     <input type="text" id="Q3" name="Q3" required="required"/> </div>
-                <img id='d' class="LetterImg" src="https://i.imgur.com/5dv24ZV.jpg" style="width:400px" >
-                   <div class="AnswerField">     <input type="text" id="Q4" name="Q4" required="required"/> </div>
-                <img  id = 'i' class="LetterImg" src="https://i.imgur.com/3vzvmGJ.jpg" >
-                   <div class="AnswerField">     <input type="text" id="Q5" name="Q5" required="required"/> </div>
-                <img  id = 'b' class="LetterImg" src="https://i.imgur.com/iJn9ZUs.jpg" >
-                   <div class="AnswerField">     <input type="text" id="Q6" name="Q6" required="required"/> </div>
-                   
-                <br/>I am done <button type="submit">Send</button><br />
+
+                <div class='highl'> <h1> Quiz</h1></div>
+                <h2>How well do you know the sign alphabet?</h2>    
+                <p>Which letter is it? Fill in below each picture</p>    
+
+<script>
+
+</script>
+        <div id = "QuizForm">        
+                <form method="post" action="/QuizResults">
+                        <img  id = 'y' class="LetterImg" src="https://i.imgur.com/z6mV6kx.jpg" >
+                        <div class="AnswerField">     <input type="text" id="Q1" name="Q1" required="required"/> </div>
+
+                        <img  id = 'l' class="LetterImg" src="https://i.imgur.com/poJ34P8.jpg" >
+                        <div class="AnswerField">     <input type="text" id="Q2" name="Q2" required="required"/> </div>
+                        <img  id = 'o' class="LetterImg" src="https://i.imgur.com/e0hBJ2h.jpg" >
+                        <div class="AnswerField">     <input type="text" id="Q3" name="Q3" required="required"/> </div>
+                        <img id='d' class="LetterImg" src="https://i.imgur.com/5dv24ZV.jpg" style="width:400px" >
+                        <div class="AnswerField">     <input type="text" id="Q4" name="Q4" required="required"/> </div>
+                        <img  id = 'i' class="LetterImg" src="https://i.imgur.com/3vzvmGJ.jpg" >
+                        <div class="AnswerField">     <input type="text" id="Q5" name="Q5" required="required"/> </div>
+                        <img  id = 'b' class="LetterImg" src="https://i.imgur.com/iJn9ZUs.jpg" >
+                        <div class="AnswerField">     <input type="text" id="Q6" name="Q6" required="required"/> </div>
+                        
+                        <br/>I am done <button type="submit">Send</button><br />
+                        </div>
                 </div>
         </div>
 </body>
