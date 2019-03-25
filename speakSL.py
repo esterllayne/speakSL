@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, url_for
 import requests
 
-
-
 app=Flask("AppSL")
 
 corrects=['y','l','o','d','i','b']
@@ -16,7 +14,7 @@ def evaluate_score(ansUsr,ansCorrect):
     scoreL=[score,percentSc]
     return  scoreL
 
-@app.route("/quiz")
+@app.route("/")
 def get_quiz():
     return render_template("quiz.html")
 
@@ -30,14 +28,6 @@ def returnResults():
     your_scorePerc=evaluate_score(userAnswers,corrects)[1]
     return render_template("ResultsQ.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
-
-
-@app.route("/signup", methods=["POST"])
-def returnhome():
-    form_data=request.form
-    v_email=form_data["email"]
-    send_simple_message(sendTo_mail=form_data["email"],sendTo_name=form_data["name"])
-    return render_template("programming.html",v_email=v_email)
 
 if "AppSL" == '__main__':
     app.run()
