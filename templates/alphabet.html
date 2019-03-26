@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
-  <title>The Alphabet</title>
+  <title>Sign Language - The Alphabet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}"> 
 
+</head>
 
+      
 
   <style>
         /* The Modal (background) */
@@ -50,15 +57,20 @@
         </style>
 
 </head>
-
+<header>
+    <div class ="content">
+       <ul>
+         <li><a href="/index"> <b>Home</b>  </a></li>
+         <li><a href="/greetings"> <b>Greetings</b> </a></li>
+         <li><a href="/small" > <b>Small phrases</b> </a></li>
+         <li><a href="/alphabet"> <b>Alphabet</b> </a></li>
+         <li><a href="/quiz"><b>Quiz</b> </a></li>
+       </ul>
+   
+   </div>
+   </header>
 <body>
-            <div class="header">
-                <a href="index.html">Home</a>
-                <a href="greetings.html">Greetings</a>
-                <a href="small.html">Small Phrases</a>
-                <a href="alphabet.html">The Alphabet</a>
-                <a href="#">Quiz</a>
-            </div>
+    <div class ="content">
         <h2>Click on one of the letters bellow to learn how to sign them.</h2>
 
 
@@ -251,9 +263,9 @@
          </div>
 
 
-        <!-- Letter S -->
-        <button id="myBtnS">S</button>
-        <div id="myModalS" class="modal">
+         <div class ="content"></div>  <!-- Letter S -->
+         <div class ="content"></div>  <button id="myBtnS">S</button>
+         <div class ="content"></div>  <div id="myModalS" class="modal">
 
          <div class="modal-content">
            <span class="close">&times;</span>
@@ -968,5 +980,5 @@
               }
             }
         </script>
-
+</div>
 </body>

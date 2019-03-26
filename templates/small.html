@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Small Phrases</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+  <head>
+    <title>Sign Language - Small Phrases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}"> 
+  
+  </head>
   
   <style>
 /* The Modal (background) */
@@ -48,15 +52,24 @@
 
   </style>
 </head>
-<body>
-        <div class="header">
-                <a href="index.html">Home</a>
-                <a href="greetings.html">Greetings</a>
-                <a href="small.html">Small Phrases</a>
-                <a href="alphabet.html">The Alphabet</a>
-                <a href="#">Quiz</a>
-        </div>
 
+<meta http-equiv="Cache-control" content="no-cache">
+
+<header>
+ <div class ="content">
+    <ul>
+      <li><a href="/index"> <b>Home</b>  </a></li>
+      <li><a href="/greetings"> <b>Greetings</b> </a></li>
+      <li><a href="/small" > <b>Small phrases</b> </a></li>
+      <li><a href="/alphabet"> <b>Alphabet</b> </a></li>
+      <li><a href="/quiz"><b>Quiz</b> </a></li>
+    </ul>
+
+</div>
+</header>
+
+<body>
+    <div class ="content">
 
         <!--  Thank You    -->
         <button id="myBtnThankYou">Thank you!</button>
@@ -267,5 +280,5 @@
     
 
 
-
+      </div>
 </body>
