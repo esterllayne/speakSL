@@ -4,6 +4,7 @@
   <head >
     <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}"> 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/index.css') }}"> 
     <title>Speak Sign Language</title>
 
 </head>
@@ -30,14 +31,16 @@
     <h1>Welcome to SpeakSL</h1>
     <h3>SpeakSL is Project to help non hearing empaired people, comunicate trough sign language.</h3>
     <h4>Select bellow where you would like to start.</h4>
-    <ul>
+   
+   <div class ="menuIndex">
+      <ul>
         <li><a href="/"> <b>Home</b>  </a></li>
         <li><a href="/greetings"> <b>Greetings</b> </a></li>
         <li><a href="/small" > <b>Small phrases</b> </a></li>
         <li><a href="/alphabet"> <b>Alphabet</b> </a></li>
         <li><a href="/quiz"><b>Quiz</b> </a></li>
       </ul>
-  
+    </div>
   </div>
  </body>
 </html>
