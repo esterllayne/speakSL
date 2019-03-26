@@ -14,9 +14,31 @@ def evaluate_score(ansUsr,ansCorrect):
     scoreL=[score,percentSc]
     return  scoreL
 
+
 @app.route("/")
+def get_index():
+    return render_template("index.html")
+
+
+@app.route("/greetings")
+def get_greetings():
+    return render_template("greetings.html")
+
+
+@app.route("/small")
+def get_small():
+    return render_template("small.html")
+
+
+@app.route("/alphabet")
+def get_alphabet():
+    return render_template("alphabet.html")
+
+
+@app.route("/quiz")
 def get_quiz():
     return render_template("quiz.html")
+
 
 @app.route("/QuizResults", methods=["POST"])
 def returnResults():
