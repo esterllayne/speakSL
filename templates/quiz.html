@@ -2,7 +2,8 @@
 
 <head >
         <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}"> 
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/main.css') }}">
         <title>Sign Language - Quiz</title>
 
 </head>
@@ -28,10 +29,10 @@
 
    <div class ='content'>
                 <div class='highl'> <h1> Quiz</h1></div>
-                <h2>How well do you know the sign alphabet?</h2>    
-                <p>Which letter is it? Fill in below each picture</p>    
+                <h2>How well do you know the sign alphabet?</h2>
+                <p>Which letter is it? Fill in below each picture</p>
 
-        <div id = "QuizForm">        
+        <div id = "QuizForm">
                 <form method="post" action="/QuizResults">
                         <img  id = 'y' class="LetterImg" src="https://i.imgur.com/z6mV6kx.jpg" >
                         <div class="AnswerField">     <input type="text" id="Q1" name="Q1" required="required"/> </div>
@@ -46,7 +47,7 @@
                         <div class="AnswerField">     <input type="text" id="Q5" name="Q5" required="required"/> </div>
                         <img  id = 'b' class="LetterImg" src="https://i.imgur.com/iJn9ZUs.jpg" >
                         <div class="AnswerField">     <input type="text" id="Q6" name="Q6" required="required"/> </div>
-                        
+
                         <br/>I am done <button type="submit">Send</button><br />
                         </div>
                 </div>

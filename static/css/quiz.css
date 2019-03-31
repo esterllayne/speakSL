@@ -22,31 +22,8 @@
 
 
 .AnswerField {
-  position: relative; 
-  top: 2px; bottom:20px; 
-  left: 20px; 
+  position: relative;
+  top: 2px; bottom:20px;
+  left: 20px;
   right: 20px;
 }
-
-header {
-  text-align: center;
-  background-image: url("https://i.imgur.com/HnGwjwe.jpg");
-  background-size: cover;
-  line-height: 50px;
-  height: 120px;
-  padding: 15px 15px 15px 15px;
-  margin: 0px 0px 30px 0px;
-}
-body {
-  background: rgb(181, 235, 205);
-}
-
-li {
-  display: inline;
-  padding: 0px 7px 0px 7px;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
-
-
