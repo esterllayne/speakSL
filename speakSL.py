@@ -70,5 +70,5 @@ def returnResults():
 
 
 
-if "AppSL" == '__main__':
+if "MyApp" == '__main__':
     app.run()
