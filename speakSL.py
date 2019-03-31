@@ -69,4 +69,6 @@ def returnResults():
     return render_template("ResultsQ.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 
-app.run(debug=True)
+
+if "AppSL" == '__main__':
+    app.run()
