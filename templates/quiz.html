@@ -32,22 +32,17 @@
                 <h2>How well do you know the sign alphabet?</h2>
                 <p>Which letter is it? Fill in below each picture</p>
 
+        
+
         <div id = "QuizForm">
                 <form method="post" action="/QuizResults">
-                        <img  id = 'y' class="LetterImg" src="https://i.imgur.com/6qEgu6D.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q1" name="Q1" required="required"/> </div>
-
-                        <img  id = 'l' class="LetterImg" src="https://i.imgur.com/N3OiXqa.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q2" name="Q2" required="required"/> </div>
-                        <img  id = 'o' class="LetterImg" src="https://i.imgur.com/7zwLHYZ.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q3" name="Q3" required="required"/> </div>
-                        <img id='d' class="LetterImg" src="https://i.imgur.com/sLv8lym.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q4" name="Q4" required="required"/> </div>
-                        <img  id = 'i' class="LetterImg" src="https://i.imgur.com/JB6JeJx.jpg.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q5" name="Q5" required="required"/> </div>
-                        <img  id = 'b' class="LetterImg" src="https://i.imgur.com/i64U0Og.jpg.jpg" >
-                        <div class="AnswerField">     <input type="text" id="Q6" name="Q6" required="required"/> </div>
-
+                   {% for key, value in PickedLettersDict.items() %}
+                        <img  id = {{key}} class="LetterImg" src="{{value}}" >
+                        <div class="AnswerField">     <input placeholder = {{key}} type="text" id={{key}} 
+                                name={{key}} required="required"/> </div>
+                    
+                        <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
+                   {% endfor %}
                         <br/>I am done <button type="submit">Send</button><br />
                         </div>
                 </div>
