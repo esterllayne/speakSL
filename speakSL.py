@@ -4,7 +4,6 @@ import numpy as np
 
 app=Flask("AppSL")
 
-
 alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U0Og.jpg","c":"https://i.imgur.com/XY6I3AF.jpg",
 "d":"https://i.imgur.com/sLv8lym.jpg","e":"https://i.imgur.com/byfORPL.jpg","f":"https://i.imgur.com/dEGU7Cb.jpg",
 "g":"https://i.imgur.com/lW9Usvg.jpg","h":"https://i.imgur.com/T4tbyHM.jpg","i":"https://i.imgur.com/JB6JeJx.jpg",
@@ -28,11 +27,9 @@ def pick(theDict):
     return dict( (k, theDict[k]) for k in pickedLetters if k in theDict)
 
 
-
 @app.route("/")
 def get_index():
     return render_template("index.html")
-
 
 @app.route("/greetings")
 def get_greetings():
@@ -55,8 +52,6 @@ def get_quiz():
     PickedLettersDict=pick(alphabetD)
     return (render_template("quiz.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
 
-
-
 @app.route("/QuizResults", methods=["POST"])
 def returnResults():
     form_data=request.form
@@ -67,7 +62,6 @@ def returnResults():
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("ResultsQ.html",your_score=your_score,your_scorePerc=your_scorePerc)
-
 
 if "AppSL" == '__main__':
     app.run()
