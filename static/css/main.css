@@ -15,6 +15,10 @@
   color: white ;
 }
 
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
 header {
   text-align: center;
   background-image: url("https://i.imgur.com/HnGwjwe.jpg");
