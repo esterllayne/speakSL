@@ -8,7 +8,11 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 "d":"https://i.imgur.com/sLv8lym.jpg","e":"https://i.imgur.com/byfORPL.jpg","f":"https://i.imgur.com/dEGU7Cb.jpg",
 "g":"https://i.imgur.com/lW9Usvg.jpg","h":"https://i.imgur.com/T4tbyHM.jpg","i":"https://i.imgur.com/JB6JeJx.jpg",
 "j":"https://i.imgur.com/hych0qL.jpg","k":"https://i.imgur.com/eBgmjvw.jpg","l":"https://i.imgur.com/N3OiXqa.jpg",
-"m":"https://i.imgur.com/eSNfSQH.jpg","n":"https://i.imgur.com/C6WTAhy.jpg"}
+"m":"https://i.imgur.com/eSNfSQH.jpg","n":"https://i.imgur.com/C6WTAhy.jpg","o":"https://i.imgur.com/7zwLHYZ.jpg",
+"p":"https://i.imgur.com/Gm3lOgi.jpg","q":"https://i.imgur.com/1If07uh.jpg","r":"https://i.imgur.com/qt4F7jG.jpg",
+"s":"https://i.imgur.com/BSHtJmS.jpg","t":"https://i.imgur.com/amXK8jU.jpg","u":"https://i.imgur.com/RL9roFi.jpg",
+"v":"https://i.imgur.com/pGiMgvM.jpg","w":"https://i.imgur.com/mJzLDLp.jpg","x":"https://i.imgur.com/DnIUoVk.jpg",
+"y":"https://i.imgur.com/6qEgu6D.jpg","z":"https://i.imgur.com/h6oWvhS.jpg"}
 
 def evaluate_score(ansUsr,ansCorrect):
     score=0
