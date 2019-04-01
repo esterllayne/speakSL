@@ -40,7 +40,7 @@
                 <form method="post" action="/QuizResults">
                    {% for key, value in PickedLettersDict.items() %}
                         <img  id = {{key}} class="LetterImg" src="{{value}}" >
-                        <div class="AnswerField">     <input  type="text" id={{key}} 
+                        <div class="AnswerField">     <input  type="text" id={{key}} pattern="[A-Za-z]{1}"
                                 name={{key}} required="required"/> </div>
                     
                         <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
