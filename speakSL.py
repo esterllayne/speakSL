@@ -49,19 +49,9 @@ def get_small():
 def get_alphabet():
     return render_template("alphabet.html")
 
-
-
-
-@app.route("/resultsQuiz", methods=["POST","GET"])
-def returnResults():
-    form_data=request.form
-    correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
-    print(correctLetters)
-    userAnswers=[form_data[correctLetters[0]], form_data[correctLetters[1]], form_data[correctLetters[2]], form_data[correctLetters[3]],
-    form_data[correctLetters[4]], form_data[correctLetters[5]] ]
-    your_score=evaluate_score(userAnswers,correctLetters)[0]
-    your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
-    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
+@app.route("/alphabet")
+def get_quiz():
+    return render_template("quiz.html")
 
 @app.route("/quizG")
 def get_quizG():
@@ -75,6 +65,19 @@ def get_quizA():
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
     PickedLettersDict=pick(alphabetD)
     return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
+
+
+@app.route("/resultsQuiz", methods=["POST"])
+def returnResults():
+    form_data=request.form
+    correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
+    print(correctLetters)
+    userAnswers=[form_data[correctLetters[0]], form_data[correctLetters[1]], form_data[correctLetters[2]], form_data[correctLetters[3]],
+    form_data[correctLetters[4]], form_data[correctLetters[5]] ]
+    your_score=evaluate_score(userAnswers,correctLetters)[0]
+    your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
+    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
+
 
 
 if "AppSL" == '__main__':
