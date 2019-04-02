@@ -33,15 +33,15 @@
 <body>
     <div class='content' class= "textC">
       {% if your_scorePerc > 80 %}
-        <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}.Congratulations, you are an expert.</b></h3>
+        <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. Congratulations, you are an expert</b></h3>
       {% elif your_scorePerc > 60 %}
-      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}} - pretty good</b></h3>
+      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}% - pretty good!</b></h3>
       {% elif your_scorePerc > 40 %}
-      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}. Not too bad, your knowledge is about average.</b></h3>
+      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. Not too bad, your knowledge is about average.</b></h3>
       {% elif your_scorePerc > 20 %}
-      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}, you should practice more.</b></h3>
+      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%, you should practice more.</b></h3>
       {% else %}
-      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}. You should really practice more.</b></h3>
+      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. You should really practice more.</b></h3>
       {% endif %}
       <h2><b>Would you like to take another quiz?</b></h2>
       <ul>
