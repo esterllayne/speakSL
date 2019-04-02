@@ -19,9 +19,9 @@ greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif
 "Good Night":"https://media.giphy.com/media/l4Jz5WK4Uddr8KsSc/giphy.gif","Thank You!":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
 "You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif",
 "How Are You?":"https://media.giphy.com/media/3o7TKDw5NA17fKJVWU/giphy.gif",
-"I am fine.","https://media.giphy.com/media/l4Jzd71ci3msO66ac/giphy.gif",
+"I'm fine.":"https://media.giphy.com/media/l4Jzd71ci3msO66ac/giphy.gif",
 "What's your name?":"https://media.giphy.com/media/3o7TKDJBonanzESryE/giphy.gif",
-"My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif"}
+"My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif","Nice to meet you!":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif"}
 
 def evaluate_score(ansUsr,ansCorrect):
     score=0
