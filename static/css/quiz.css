@@ -11,6 +11,20 @@
   text-align:center;
 }
 
+
+.PhraseImg {
+  width:400px;
+  height:200px;
+  display:block;
+  border: 10px solid black;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  horizontal-align: middle;
+  text-align:center;
+}
+
 .highl{
   color:darkblue;
 }
