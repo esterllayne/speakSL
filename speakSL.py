@@ -52,7 +52,7 @@ def get_alphabet():
 
 
 
-@app.route("/quiz", methods=["POST"])
+@app.route("/quiz", methods=["POST","GET"])
 def returnResults():
     form_data=request.form
     correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
