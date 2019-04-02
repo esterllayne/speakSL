@@ -28,7 +28,7 @@ greetingsD={"G1": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif",
 "S7":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif",
 "S8":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
 
-greetingsD={"G1": "Hello,
+greetingsD={"G1": "Hello",
 "G2":"Good Morning",
 "G3":"Good Afternoon",
 "G4":"Good Evening",
