@@ -28,7 +28,7 @@ greetingsD={"G1": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif",
 "S7":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif",
 "S8":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
 
-greetingsD={"G1": "Hello",
+DictAnswers={"G1": "Hello",
 "G2":"Good Morning",
 "G3":"Good Afternoon",
 "G4":"Good Evening",
@@ -94,6 +94,7 @@ def get_quizG():
 
 @app.route("/quizA")
 def get_quizA():
+    global PickedLettersGr
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
     questionIDs=['id1','id2','id3','id4','id5','id6']
     PickedLettersDict=pick(alphabetD)
@@ -108,7 +109,7 @@ def returnResults():
     if indicatorQ == 'alphabet':
         correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
     else:
-        correctLetters=[DictAnswers[x] for x in PickedLettersDict]
+        correctLetters=[DictAnswers[x] for x in pickedLetters]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
