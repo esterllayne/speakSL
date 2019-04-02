@@ -31,13 +31,12 @@
 
    <div class ='content'>
                 <div class='highl'> <h1> Quiz</h1></div>
-                <h2>How well do you know the sign alphabet?</h2>
                 <p>Which letter is it? Fill in below each picture</p>
 
         
 
         <div id = "QuizForm">
-                <form method="post" action="/quiz">
+                <form method="post" action="/resultsQuiz">
                    {% for key, value in PickedLettersDict.items() %}
                         <img  id = {{key}} class="LetterImg" src="{{value}}" >
                         <div class="AnswerField">     <input size="3"  type="text" id={{key}} pattern="[A-Za-z]{1}"title="Please submit a single letter"

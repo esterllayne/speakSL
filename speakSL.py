@@ -52,7 +52,7 @@ def get_alphabet():
 
 
 
-@app.route("/quiz", methods=["POST","GET"])
+@app.route("/resultsQuiz", methods=["POST","GET"])
 def returnResults():
     form_data=request.form
     correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
@@ -61,7 +61,7 @@ def returnResults():
     form_data[correctLetters[4]], form_data[correctLetters[5]] ]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
-    return render_template("quiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
+    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 @app.route("/quizG")
 def get_quizG():
