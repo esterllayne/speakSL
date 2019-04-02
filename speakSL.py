@@ -17,7 +17,7 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
 "Good Afternoon":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif","Good Evening":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
 "Good Night":"https://media.giphy.com/media/l4Jz5WK4Uddr8KsSc/giphy.gif","Thank You":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
-"You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif"}
+"You're welcome":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif","How Are You?":"https://media.giphy.com/media/3o7TKDw5NA17fKJVWU/giphy.gif"}
 
 def evaluate_score(ansUsr,ansCorrect):
     score=0

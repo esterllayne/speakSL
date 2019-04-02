@@ -39,7 +39,7 @@
         <div id = "QuizForm">
                 <form method="post" action="/quiz">
                    {% for key, value in PickedLettersDict.items() %}
-                        <img  id = {{key}} class="LetterImg" src="{{value}}" >
+                        <img  id = {{key}} class="PhraseImg" src="{{value}}" >
                         <div class="AnswerField">     <input size="3"  type="text" id={{key}} title="Please submit a single letter"
                                 name={{key}} required="required"/> </div>
                     
