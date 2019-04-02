@@ -39,9 +39,9 @@
         <div id = "QuizForm">
                 <form method="post" action="/resultsQuiz">
                    {% for key, value in PickedLettersDict.items() %}
-                        <img  id = {{key}} class="PhraseImg" src="{{value}}" >
-                        <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
-                                name={{key}} required="required"/> </div>
+                        <img   class="PhraseImg" src="{{value}}" >
+                        <div class="AnswerField">     <input size="40"placeholder={{key}}  type="text" id={{qIDs[loop.index0]}} title="Please submit a single letter"
+                                name={{qIDs[loop.index0]}} required="required"/> </div>
                     
                         <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
                    {% endfor %}

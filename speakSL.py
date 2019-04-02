@@ -66,15 +66,17 @@ def get_quiz():
 @app.route("/quizG")
 def get_quizG():
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
+    questionIDs=['id1','id2','id3','id4','id5','id6']
     PickedLettersDict=pick(greetingsD)
-    return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
+    return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels,qIDs=questionIDs))
 
 
 @app.route("/quizA")
 def get_quizA():
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
+    questionIDs=['id1','id2','id3','id4','id5','id6']
     PickedLettersDict=pick(alphabetD)
-    return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
+    return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels,qIDs=questionIDs))
 
 
 @app.route("/resultsQuiz", methods=["POST"])
@@ -82,8 +84,8 @@ def returnResults():
     form_data=request.form
     correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
     print(correctLetters)
-    userAnswers=[form_data[correctLetters[0]], form_data[correctLetters[1]], form_data[correctLetters[2]], form_data[correctLetters[3]],
-    form_data[correctLetters[4]], form_data[correctLetters[5]] ]
+    userAnswers=[form_data["id1"], form_data[correctLetters["id2"]], form_data[correctLetters["id3"]], form_data[correctLetters["id4"]],
+    form_data[correctLetters["id5"]], form_data[correctLetters["id6"]] ]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
