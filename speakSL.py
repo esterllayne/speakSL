@@ -94,7 +94,6 @@ def get_quizG():
 
 @app.route("/quizA")
 def get_quizA():
-    global PickedLettersGr
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
     questionIDs=['id1','id2','id3','id4','id5','id6']
     PickedLettersDict=pick(alphabetD)
