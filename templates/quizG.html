@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head >
+
+        <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/main.css') }}">
+        <title>Sign Language - Quiz</title>
+
+</head>
+
+
+
+<meta http-equiv="Cache-control" content="no-cache">
+
+<header>
+ <div class ="content">
+        <h1>Speak Sign Language</h1>
+    <ul>
+        <li><a href="/"> <b>Home</b>  </a></li>
+        <li><a href="/greetings"> <b>Greetings</b> </a></li>
+        <li><a href="/small" > <b>Small phrases</b> </a></li>
+        <li><a href="/alphabet"> <b>Alphabet</b> </a></li>
+        <li><a href="/quiz"><b>Quiz</b> </a></li>
+    </ul>
+
+</div>
+</header>
+
+<body>
+
+   <div class ='content'>
+                <div class='highl'> <h1> Quiz</h1></div>
+                <h2>How well do you know greetings and phrases in sign language?</h2>
+                <h4>What are they saying? Fill in below each gif</h34>
+
+        
+
+        <div id = "QuizForm">
+                <form method="post" action="/resultsQuiz">
+                   {% for key, value in PickedLettersDict.items() %}
+                        <img  id = {{qLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
+                        <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
+                                name={{qLabels[loop.index0]}} required="required"/> </div>
+                    
+                        <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
+                   {% endfor %}
+                        <br/>I am done <button type="submit">Send</button><br />
+                        </div>
+                </div>
+        </div>
+   </div>
+</body>
