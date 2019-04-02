@@ -14,7 +14,7 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 "v":"https://i.imgur.com/pGiMgvM.jpg","w":"https://i.imgur.com/mJzLDLp.jpg","x":"https://i.imgur.com/DnIUoVk.jpg",
 "y":"https://i.imgur.com/6qEgu6D.jpg","z":"https://i.imgur.com/h6oWvhS.jpg"}
 
-GreetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
+greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
 "Good Afternoon":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif","Good Evening":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
 "Good Night":"https://media.giphy.com/media/l4Jz5WK4Uddr8KsSc/giphy.gif","Thank You":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
 "You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif"}
@@ -61,7 +61,7 @@ def get_quiz():
 @app.route("/quizG")
 def get_quizG():
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
-    PickedLettersDict=pick(alphabetD)
+    PickedLettersDict=pick(greetingsD)
     return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
 
 
