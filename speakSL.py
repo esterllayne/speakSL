@@ -14,40 +14,6 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 "v":"https://i.imgur.com/pGiMgvM.jpg","w":"https://i.imgur.com/mJzLDLp.jpg","x":"https://i.imgur.com/DnIUoVk.jpg",
 "y":"https://i.imgur.com/6qEgu6D.jpg","z":"https://i.imgur.com/h6oWvhS.jpg"}
 
-greetingsD={"G1": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif",
-"G2":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
-"G3":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif",
-"G4":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
-"G5":"https://media.giphy.com/media/l4Jz5WK4Uddr8KsSc/giphy.gif",
-"S1":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
-"S2":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif",
-"S3":"https://media.giphy.com/media/3o7TKDw5NA17fKJVWU/giphy.gif",
-"S4":"https://media.giphy.com/media/l4Jzd71ci3msO66ac/giphy.gif",
-"S5":"https://media.giphy.com/media/3o7TKDJBonanzESryE/giphy.gif",
-"S6":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif",
-"S7":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif",
-"S8":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
-
-DictAnswers={"G1": "Hello",
-"G2":"Good Morning",
-"G3":"Good Afternoon",
-"G4":"Good Evening",
-"G5":"Good Night",
-"S1":"Thank you",
-"S2":"You're welcome!",
-"S3":"How Are You?",
-"S4":"I'm fine.",
-"S5":"What's your name?",
-"S6":"My name is...",
-"S7":"Nice to meet you!",
-"S8":"Goodbye"}
-
-def pick(theDict): 
-    global pickedLetters
-    pickedLetters = np.random.choice(a=list(theDict),size=6,replace=False)  
-    return dict( (k, theDict[k]) for k in pickedLetters if k in theDict)
-
-
 def evaluate_score(ansUsr,ansCorrect):
     score=0
     for i in range(len(ansUsr)):
@@ -60,6 +26,9 @@ def evaluate_score(ansUsr,ansCorrect):
     scoreL=[score,percentSc]
     return  scoreL
 
+def pick(theDict): 
+    pickedLetters = np.random.choice(a=list(theDict),size=6,replace=False)  
+    return dict( (k, theDict[k]) for k in pickedLetters if k in theDict)
 
 
 @app.route("/")
@@ -80,40 +49,23 @@ def get_small():
 def get_alphabet():
     return render_template("alphabet.html")
 
+
 @app.route("/quiz")
 def get_quiz():
-    return render_template("quiz.html")
-
-@app.route("/quizG")
-def get_quizG():
     questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
-    questionIDs=['id1','id2','id3','id4','id5','id6']
-    PickedLettersDict=pick(greetingsD)
-    return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels,qIDs=questionIDs))
-
-
-@app.route("/quizA")
-def get_quizA():
-    questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
-    questionIDs=['id1','id2','id3','id4','id5','id6']
     PickedLettersDict=pick(alphabetD)
-    return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels,qIDs=questionIDs))
+    return (render_template("quiz.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
 
-
-@app.route("/resultsQuiz", methods=["POST"])
+@app.route("/QuizResults", methods=["POST"])
 def returnResults():
     form_data=request.form
-    indicatorQ=[form_data["whichQuiz"]]
-    userAnswers=[form_data["id1"], form_data["id2"], form_data["id3"], form_data["id4"],form_data["id5"],form_data["id6"] ]
-    if indicatorQ == 'alphabet':
-        correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
-    else:
-        correctLetters=[DictAnswers[x] for x in pickedLetters]
+    correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
+    print(correctLetters)
+    userAnswers=[form_data[correctLetters[0]], form_data[correctLetters[1]], form_data[correctLetters[2]], form_data[correctLetters[3]],
+    form_data[correctLetters[4]], form_data[correctLetters[5]] ]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
-    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
-
-
+    return render_template("ResultsQ.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 if "AppSL" == '__main__':
     app.run()
