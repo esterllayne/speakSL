@@ -50,11 +50,7 @@ def get_alphabet():
     return render_template("alphabet.html")
 
 
-@app.route("/quizA")
-def get_quiz():
-    questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
-    PickedLettersDict=pick(alphabetD)
-    return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
+
 
 @app.route("/quiz", methods=["POST"])
 def returnResults():
@@ -66,6 +62,18 @@ def returnResults():
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("quiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
+
+@app.route("/quizA")
+def get_quizA():
+    questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
+    PickedLettersDict=pick(alphabetD)
+    return (render_template("quizA.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
+
+@app.route("/quizG")
+def get_quizG():
+    questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
+    PickedLettersDict=pick(alphabetD)
+    return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels))
 
 if "AppSL" == '__main__':
     app.run()
