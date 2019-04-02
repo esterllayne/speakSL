@@ -24,6 +24,9 @@ greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif
 "My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif",
 "Nice to meet you!":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif","Goodbye":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
 
+
+
+
 def evaluate_score(ansUsr,ansCorrect):
     score=0
     for i in range(len(ansUsr)):
