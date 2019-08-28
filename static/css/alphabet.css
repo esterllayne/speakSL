@@ -2,7 +2,7 @@ img.alphabetletter{
     border: 1px solid black;
     border-radius: 4px;
     padding: 5px;
-    width: 100px; /* Full width */ /* Full height */
-
+    width: 30px; /* Full width */ /* Full height */
+    width: 40px; 
 
 }
