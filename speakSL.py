@@ -16,13 +16,13 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 
 greetingsD={"Hello": "https://i.imgur.com/LaD3P7J.gif","Good Morning":"https://i.imgur.com/sX4ktUG.gif",
 "Good Afternoon":"https://i.imgur.com/U5tXIJi.gif","Good Evening":"https://i.imgur.com/yA7Bwpj.gif",
-"Good Night":"https://i.imgur.com/yA7Bwpj.gif","Thank You!":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
-"You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif",
-"How Are You?":"https://media.giphy.com/media/3o7TKDw5NA17fKJVWU/giphy.gif",
-"I'm fine.":"https://media.giphy.com/media/l4Jzd71ci3msO66ac/giphy.gif",
-"What's your name?":"https://media.giphy.com/media/3o7TKDJBonanzESryE/giphy.gif",
-"My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif",
-"Nice to meet you!":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif","Goodbye":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
+"Good Night":"https://i.imgur.com/yA7Bwpj.gif","Thank You!":"https://i.imgur.com/X3z7YBm.gif",
+"You're welcome!":"https://i.imgur.com/QV8Aue0.gif",
+"How Are You?":"https://i.imgur.com/tSUZYHc.gif",
+"I'm fine.":"https://i.imgur.com/YEUrROL.gif",
+"What's your name?":"https://i.imgur.com/A7tptou.gif",
+"My name is...":"https://i.imgur.com/SozfEPL.gif",
+"Nice to meet you!":"https://i.imgur.com/zdOg8TT.gif","Goodbye":"https://i.imgur.com/zdOg8TT.gif"}
 
 greetingsUncovered={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
 "Good Afternoon":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif","Good Evening":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
