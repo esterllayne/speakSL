@@ -42,10 +42,13 @@
   }
 
   img.gif_image_greeting{
-     border: 1px solid #ddd;
-     border-radius: 4px;
-     padding: 100px;
-     margin: 100px;
-     width: 80%; /* Full width */
-     height: 80%; /* Full height */
+    width:200px;
+    height:200px;
+    display:block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    horizontal-align: middle;
+    text-align:center;
     }
