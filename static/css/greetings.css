@@ -1,27 +1,9 @@
+
+
 img.gif_image_greeting{
-   border: 1px solid #ddd;
-   border-radius: 4px;
-   padding: 100px;
-   margin: 100px;
-   width: 50%; /* Full width */
-   height: 50%; /* Full height */
-  }
-
-
-
-/* The Modal (background) */
-
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ padding: 5px;
+ width: 80%; /* Full width */
+ height: 80%;
+}
