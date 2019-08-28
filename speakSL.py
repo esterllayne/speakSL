@@ -14,7 +14,17 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 "v":"https://i.imgur.com/pGiMgvM.jpg","w":"https://i.imgur.com/mJzLDLp.jpg","x":"https://i.imgur.com/DnIUoVk.jpg",
 "y":"https://i.imgur.com/6qEgu6D.jpg","z":"https://i.imgur.com/h6oWvhS.jpg"}
 
-greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
+greetingsD={"Hello": "https://i.imgur.com/LaD3P7J.gif","Good Morning":"https://i.imgur.com/sX4ktUG.gif",
+"Good Afternoon":"https://i.imgur.com/U5tXIJi.gif","Good Evening":"https://i.imgur.com/yA7Bwpj.gif",
+"Good Night":"https://i.imgur.com/yA7Bwpj.gif","Thank You!":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
+"You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif",
+"How Are You?":"https://media.giphy.com/media/3o7TKDw5NA17fKJVWU/giphy.gif",
+"I'm fine.":"https://media.giphy.com/media/l4Jzd71ci3msO66ac/giphy.gif",
+"What's your name?":"https://media.giphy.com/media/3o7TKDJBonanzESryE/giphy.gif",
+"My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif",
+"Nice to meet you!":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif","Goodbye":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
+
+greetingsUncovered={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
 "Good Afternoon":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif","Good Evening":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
 "Good Night":"https://media.giphy.com/media/l4Jz5WK4Uddr8KsSc/giphy.gif","Thank You!":"https://media.giphy.com/media/l0MYrlUnFtq25TQR2/giphy.gif",
 "You're welcome!":"https://media.giphy.com/media/3o7TKSRNcdPmcNmTGo/giphy.gif",
@@ -23,6 +33,7 @@ greetingsD={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif
 "What's your name?":"https://media.giphy.com/media/3o7TKDJBonanzESryE/giphy.gif",
 "My name is...":"https://media.giphy.com/media/3o7TKzkaMOHallCppe/giphy.gif",
 "Nice to meet you!":"https://media.giphy.com/media/1oHlX1mrGBF5xu1ks1/giphy.gif","Goodbye":"https://media.giphy.com/media/3o7TKzb3i29i86BPJm/giphy.gif"}
+
 
 
 
