@@ -5,8 +5,6 @@
         <link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" rel="stylesheet">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/quiz.css') }}">
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/main.css') }}">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename= 'css/allgifs.css') }}">
-    
         <title>Sign Language - Quiz</title>
 
 </head>
@@ -41,7 +39,7 @@
         <div id = "QuizForm">
                 <form method="post" action="/resultsQuiz">
                    {% for key, value in PickedLettersDict.items() %}
-                        <img  id = {{qLabels[loop.index0]}} class="gifs_image" src="{{value}}" >
+                        <img  id = {{qLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
                         <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
                                 name={{qLabels[loop.index0]}} required="required"/> </div>
                     
