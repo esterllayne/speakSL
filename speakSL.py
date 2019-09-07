@@ -79,10 +79,16 @@ def get_quiz():
 
 @app.route("/quizG")
 def get_quizG():
-    questionLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
-    questionIDs=['id1','id2','id3','id4','id5','id6']
-    PickedLettersDict=pick(greetingsD)
-    return (render_template("quizG.html",PickedLettersDict=PickedLettersDict,qLabels=questionLabels,qIDs=questionIDs))
+    greetingsIDs=['id1','id2','id3','id4','id5','id6']
+    PickedGreetings=pick(greetingsD)
+    PickedGunmixedKeys=PickedGreetings.keys()
+    PickedGreetingsMixed=pick(PickedGreetings)
+    greetingsLabels=['a','b','c','d','e','f']
+    PossibleGreetingsPicked=PickedGreetingsMixed.keys()
+    MixedGreetingsDict=dict(zip(greetingsLabels,PossibleGreetingsPicked))
+    UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
+    return (render_template("quizG.html",PickedGreetings=PickedGreetings,
+    PossibleGreetingsPicked=PossibleGreetingsPicked,gIDs=greetingsIDs))
 
 
 @app.route("/quizA")
@@ -103,6 +109,9 @@ def returnResults():
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
+@app.route("/resultsQuizG")
+def get_greetings():
+    return render_template("/temporary")
 
 
 if "AppSL" == '__main__':

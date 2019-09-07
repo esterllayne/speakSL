@@ -15,7 +15,6 @@
   border: 3px solid  black;
   display: block;
   border-radius: 4px;
-  padding: 5px;
   width: 80%; 
   height: 80%;
   margin-right: 10px;
@@ -46,4 +45,11 @@
   margin-left: 10px;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+
+.stickydiv {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
