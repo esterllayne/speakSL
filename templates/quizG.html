@@ -45,7 +45,12 @@
                                         name={{gLabels[loop.index0]}} required="required"> 
                           </div>
                     
-                        <input type="hidden" id={{gLabels[loop.index0]}} placeholder={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
+                        <input type="hidden" id={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
+                        <select name="answer">
+                                 {% for key, value in PickedGreetingsMixed.items() %}
+                                        <option value={{value}}>{{key}}</option>
+                                  {% endfor %}
+                        </select>
                    {% endfor %}
                         <br>I am done <button type="submit">Send</button><br>
                 </form>
