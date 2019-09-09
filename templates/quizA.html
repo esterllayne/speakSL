@@ -39,14 +39,14 @@
                 <form method="post" action="/resultsQuiz">
                    {% for key, value in PickedLettersDict.items() %}
                         <img  class="LetterImg" src="{{value}}" >
-                        <div class="AnswerField">     <input size="3"  type="text" id={{qIDs[loop.index0]}} pattern="[A-Za-z]{1}"title="Please submit a single letter"
-                                name={{qIDs[loop.index0]}} required="required"/> </div>
+                                <div class="AnswerField">     <input size="3"  type="text" id={{qIDs[loop.index0]}} pattern="[A-Za-z]{1}"title="Please submit a single letter"
+                                        name={{qIDs[loop.index0]}} required="required"> 
+                                </div>
                     
                         <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}} >
                    {% endfor %}
-                        <br/>I am done <button type="submit">Send</button><br />
-                        </div>
-                </div>
+                        <br>I am done <button type="submit">Send</button><br>
+                </form>
         </div>
    </div>
 </body>
