@@ -109,9 +109,9 @@ def returnResults():
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
-@app.route("/resultsQ")
-def get_greetings():
-    return render_template("/temporary")
+#@app.route("/resultsQ")
+#def get_greetings():
+ #   return render_template("/temporary")
 
 
 if "AppSL" == '__main__':
