@@ -45,8 +45,8 @@
                     
                         <input type="hidden" id={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
                         <select name="answer">
-                                 {% for key, value in PickedGreetingsMixed.items() %}
-                                        <option value={{value}}>{{value}}</option>
+                                 {% for key, value in answerOptions.items() %}
+                                        <option value={{key}}>{{key}}</option>
                                   {% endfor %}
                         </select>
                    {% endfor %}

@@ -83,14 +83,11 @@ def get_quizG():
     PickedGreetings=pick(greetingsD)
     PickedGunmixedKeys=PickedGreetings.keys()
 
-    greetingsLabels=['a','b','c','d','e','f']
     UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
     PickedGreetingsMixed=pick(UnmixedGreetings)
 
-    PossibleGreetingsPicked=PickedGreetingsMixed.keys()
  
-    return (render_template("quizG.html",PickedGreetings=UnmixedGreetings,PickedGreetingsMixed=PickedGreetingsMixed,
-            gLabels=greetingsLabels,gIDs=greetingsIDs))
+    return (render_template("quizG.html",PickedGreetings=PickedGreetings,gIDs=greetingsIDs,answerOptions=greetingsD))
 
 
 @app.route("/quizA")
