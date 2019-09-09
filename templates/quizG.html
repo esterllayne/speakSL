@@ -37,7 +37,7 @@
         
 
         <div id = "QuizForm">
-                <form method="post" action="/temporary">
+                <form method="post" action="/resultsQuizG">
                    {% for key, value in PickedGreetings.items() %}
                         <img  id = {{qLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
                           <div class="AnswerField">    
@@ -53,14 +53,14 @@
 
 
         <div id = "PossibleAnswers" class="stickydiv">
-                
+
                 <form method="post">
                    {% for key, value in PickedGreetings.items() %}
                         <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
-                                name={{qLabels[loop.index0]}} required="required">
+                                name={{gLabels[loop.index0]}} required="required">
                         </div>
                     
-                        <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
+                        <input type="hidden" id={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
                    {% endfor %}
                 </form>
         </div> 
