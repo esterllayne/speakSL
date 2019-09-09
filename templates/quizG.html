@@ -39,16 +39,14 @@
         <div id = "QuizForm">
                 <form method="post" action="/resultsQuizG">
                    {% for key, value in PickedGreetings.items() %}
-                        <img  id = {{gLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
-                          <div class="AnswerField">    
-                                 <input size="40"  type="text" id={{key}} title="Please submit a single letter" 
-                                        name={{gLabels[loop.index0]}} required="required"> 
+                           <div>     <img  id = {{gLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
+                     
                           </div>
                     
                         <input type="hidden" id={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
                         <select name="answer">
                                  {% for key, value in PickedGreetingsMixed.items() %}
-                                        <option value={{value}}>{{key}}</option>
+                                        <option value={{value}}>{{value}}</option>
                                   {% endfor %}
                         </select>
                    {% endfor %}
