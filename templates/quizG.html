@@ -37,31 +37,32 @@
         
 
         <div id = "QuizForm">
-                <form method="post" action="/resultsQuiz">
+                <form method="post" action="/temporary">
                    {% for key, value in PickedGreetings.items() %}
                         <img  id = {{qLabels[loop.index0]}} class="PhraseImg" src="{{value}}" >
-                        <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
-                                name={{qLabels[loop.index0]}} required="required"/> 
-                        </div>
+                          <div class="AnswerField">    
+                                 <input size="40"  type="text" id={{key}} title="Please submit a single letter" 
+                                        name={{qLabels[loop.index0]}} required="required"> 
+                          </div>
                     
                         <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
                    {% endfor %}
-                        <br/>I am done <button type="submit">Send</button><br/>
-                </div>
-                </div>
+                        <br>I am done <button type="submit">Send</button><br>
+                </form>
         </div>
 
+
         <div id = "PossibleAnswers" class="stickydiv">
+                
                 <form method="post">
                    {% for key, value in PickedGreetings.items() %}
                         <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
                                 name={{qLabels[loop.index0]}} required="required">
                         </div>
                     
-                        <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}/>
+                        <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
                    {% endfor %}
+                </form>
         </div> 
-                </div>
-        </div>
    </div>
 </body>
