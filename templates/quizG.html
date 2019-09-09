@@ -54,11 +54,12 @@
                 <form method="post">
                    {% for key, value in PickedGreetings.items() %}
                         <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
-                                name={{qLabels[loop.index0]}} required="required"/> </div>
+                                name={{qLabels[loop.index0]}} required="required"/>
+                        </div>
                     
                         <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value={{key}}>
                    {% endfor %}
-                        </div>
+                        </div> 
                 </div>
         </div>
    </div>
