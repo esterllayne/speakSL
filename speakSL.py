@@ -77,18 +77,18 @@ def get_alphabet():
 def get_quiz():
     return render_template("quiz.html")
 
-@app.route("/quizG")
-def get_quizG():
-    greetingsIDs=['id1','id2','id3','id4','id5','id6']
-    PickedGreetings=pick(greetingsD)
-    PickedGunmixedKeys=PickedGreetings.keys()
-    PickedGreetingsMixed=pick(PickedGreetings)
-    greetingsLabels=['a','b','c','d','e','f']
-    PossibleGreetingsPicked=PickedGreetingsMixed.keys()
-    MixedGreetingsDict=dict(zip(greetingsLabels,PossibleGreetingsPicked))
-    UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
-    return (render_template("quizG.html",PickedGreetings=PickedGreetings,
-    PossibleGreetingsPicked=PossibleGreetingsPicked,gIDs=greetingsIDs))
+#@app.route("/quizG")
+#def get_quizG():
+ #   greetingsIDs=['id1','id2','id3','id4','id5','id6']
+  #  PickedGreetings=pick(greetingsD)
+   # PickedGunmixedKeys=PickedGreetings.keys()
+    #PickedGreetingsMixed=pick(PickedGreetings)
+    # greetingsLabels=['a','b','c','d','e','f']
+    # PossibleGreetingsPicked=PickedGreetingsMixed.keys()
+    # MixedGreetingsDict=dict(zip(greetingsLabels,PossibleGreetingsPicked))
+    #UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
+    #return (render_template("quizG.html",PickedGreetings=PickedGreetings,
+    #PossibleGreetingsPicked=PossibleGreetingsPicked,gIDs=greetingsIDs))
 
 
 @app.route("/quizA")
