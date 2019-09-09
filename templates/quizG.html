@@ -56,7 +56,13 @@
 
                 <form method="post">
                    {% for key, value in PickedGreetings.items() %}
-                        <div class="AnswerField">     <input size="40"  type="text" id={{key}} title="Please submit a single letter"
+                        <div class="AnswerField"> 
+                                
+                                <li>
+                                                {{gLabels[loop.index0]}} 
+                                </li>
+
+                                <input size="40"  type="text" id={{key}} title="Please submit a single letter"
                                 name={{gLabels[loop.index0]}} required="required">
                         </div>
                     
