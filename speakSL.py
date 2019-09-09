@@ -81,12 +81,6 @@ def get_quiz():
 def get_quizG():
     greetingsIDs=['id1','id2','id3','id4','id5','id6']
     PickedGreetings=pick(greetingsD)
-    PickedGunmixedKeys=PickedGreetings.keys()
-
-    UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
-    PickedGreetingsMixed=pick(UnmixedGreetings)
-
- 
     return (render_template("quizG.html",PickedGreetings=PickedGreetings,gIDs=greetingsIDs,answerOptions=greetingsD))
 
 
