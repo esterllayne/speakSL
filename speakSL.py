@@ -83,7 +83,7 @@ def get_quizG():
     PickedGreetings=pick(greetingsD)
     PickedGunmixedKeys=PickedGreetings.keys()
     PickedGreetingsMixed=pick(PickedGreetings)
-    greetingsLabels=['a','b','c','d','e','f']
+    greetingLabels=['a','b','c','d','e','f']
     PossibleGreetingsPicked=PickedGreetingsMixed.keys()
     MixedGreetingsDict=dict(zip(greetingsLabels,PossibleGreetingsPicked))
     UnmixedGreetings=dict(zip(greetingsLabels,PickedGunmixedKeys))
