@@ -54,24 +54,5 @@
                 </form>
         </div>
 
-
-        <div id = "PossibleAnswers" class="stickydiv">
-
-                <form method="post">
-                   {% for key, value in PickedGreetings.items() %}
-                        <div class="AnswerField"> 
-                                
-                                <li>
-                                                {{gLabels[loop.index0]}} {{key}}
-                                </li>
-
-                                <input size="40"  type="text" id={{key}} title="Please submit a single letter"
-                                name={{gLabels[loop.index0]}} required="required">
-                        </div>
-                    
-                        <input type="hidden" id={{gLabels[loop.index0]}} name={{gLabels[loop.index0]}} value={{key}}>
-                   {% endfor %}
-                </form>
-        </div> 
    </div>
 </body>
