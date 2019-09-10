@@ -22,7 +22,7 @@ greetingsD={"Hello": "https://i.imgur.com/LaD3P7J.gif","Good Morning":"https://i
 "I'm fine.":"https://i.imgur.com/YEUrROL.gif",
 "What's your name?":"https://i.imgur.com/A7tptou.gif",
 "My name is...":"https://i.imgur.com/SozfEPL.gif",
-"Nice to meet you!":"https://i.imgur.com/zdOg8TT.gif","Goodbye":"https://i.imgur.com/zdOg8TT.gif"}
+"Nice to meet you!":"https://i.imgur.com/zdOg8TT.gif","Goodbye":"https://i.imgur.com/UygItlu.gif"}
 
 greetingsUncovered={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/giphy.gif","Good Morning":"https://media.giphy.com/media/26FLchGgqamznV64E/giphy.gif",
 "Good Afternoon":"https://media.giphy.com/media/l4JzaRsX52k8glIFa/giphy.gif","Good Evening":"https://media.giphy.com/media/l4JzdrbDeU2lMMrde/giphy.gif",
