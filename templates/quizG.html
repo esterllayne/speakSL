@@ -42,6 +42,7 @@
                      <img  id = {{gIDs[loop.index0]}} class="PhraseImg" src="{{value}}" >    
                      <input type="hidden" id={{gIDs[loop.index0]}} name={{gIDs[loop.index0]}} value={{key}}>
                         <select name="answer">
+                                        <option value="none">(Select correct phrase or greeting)</option>
                                  {% for key, value in answerOptions.items() %}
                                         <option value={{key}}>{{key}}</option>
                                   {% endfor %}
