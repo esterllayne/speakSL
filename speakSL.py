@@ -104,7 +104,7 @@ def returnResults():
 
 
 @app.route("/resultsQuizG")
-def get_greetings():
+def returnResultsG():
     return render_template("resultsQuizG.html")
 
 
