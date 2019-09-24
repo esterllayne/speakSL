@@ -102,7 +102,7 @@ def returnResults():
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
-@app.route("/resultsQuizG")
+@app.route("/resultsQuizG", methods=["POST"])
 def returnResultsG():
     return render_template("temporary.html")
 
