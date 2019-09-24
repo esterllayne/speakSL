@@ -104,7 +104,7 @@ def returnResults():
 
 @app.route("/resultsQuizG")
 def returnResultsG():
-    return render_template("quizG.html")
+    return render_template("temporary.html")
 
 
 if "AppSL" == '__main__':
