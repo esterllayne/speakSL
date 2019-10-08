@@ -40,11 +40,11 @@
                 <form method="post" action="/resultsQuizG">
                    {% for key, value in PickedGreetings.items() %}
                      <img  id = {{gIDs[loop.index0]}} class="PhraseImg" src="{{value}}" >    
-                     <input type="hidden" id={{gIDs[loop.index0]}} name={{gIDs[loop.index0]}} value={{key}}>
-                        <select name="answer">
+                     <input type="hidden" id={{qLabels[loop.index0]}} name={{qLabels[loop.index0]}} value="{{key}}" > <!-- this line changed 7.10.2019 qIDs to qLaels-->
+                        <select name={{gIDs[loop.index0]}}>
                                         <option value="none"><i>Please choose the correct phrase or greeting</i></option>
                                  {% for key, value in answerOptions.items() %}
-                                        <option value={{key}}>{{key}}</option>
+                                        <option value="{{key}}">{{key}}</option>
                                   {% endfor %}
                         </select>
                    {% endfor %}

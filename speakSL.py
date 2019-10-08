@@ -50,7 +50,7 @@ def evaluate_score(ansUsr,ansCorrect):
     scoreL=[score,percentSc]
     return  scoreL
 
-def pick(theDict): 
+def pick(theDict): # randomly selects 6 items from a dictionary (in this case greetingsD) and returns a dictionary of the 6  chosen items
     pickedLetters = np.random.choice(a=list(theDict),size=6,replace=False)  
     return dict( (k, theDict[k]) for k in pickedLetters if k in theDict)
 
@@ -79,9 +79,10 @@ def get_quiz():
 
 @app.route("/quizG")
 def get_quizG():
+    greetingLabels=['Q1','Q2','Q3','Q4','Q5','Q6']
     greetingsIDs=['id1','id2','id3','id4','id5','id6']
     PickedGreetings=pick(greetingsD)
-    return (render_template("quizG.html",PickedGreetings=PickedGreetings,gIDs=greetingsIDs,answerOptions=greetingsD))
+    return (render_template("quizG.html",PickedGreetings=PickedGreetings,qLabels=greetingLabels,gIDs=greetingsIDs,answerOptions=greetingsD))
 
 
 @app.route("/quizA")
@@ -96,15 +97,26 @@ def get_quizA():
 def returnResults():
     form_data=request.form
     correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
-    print(correctLetters)
+    print(request.form)
     userAnswers=[form_data["id1"], form_data["id2"], form_data["id3"], form_data["id4"],form_data["id5"],form_data["id6"] ]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
     return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
+# @app.route("/resultsQuizG", methods=["POST"])
+# def returnResultsG():
+#     print(request.form)
+#     return render_template("temporary.html")
+
 @app.route("/resultsQuizG", methods=["POST"])
 def returnResultsG():
-    return render_template("temporary.html")
+    form_data=request.form
+    correctAnswers= [form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
+    print(request.form)
+    userAnswers=[form_data["id1"], form_data["id2"], form_data["id3"], form_data["id4"],form_data["id5"],form_data["id6"] ]
+    your_score=evaluate_score(userAnswers,correctAnswers)[0]
+    your_scorePerc=evaluate_score(userAnswers,correctAnswers)[1]
+    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 
 if "AppSL" == '__main__':
