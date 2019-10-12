@@ -97,7 +97,6 @@ def get_quizA():
 def returnResults():
     form_data=request.form
     correctLetters=[form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
-    print(request.form)
     userAnswers=[form_data["id1"], form_data["id2"], form_data["id3"], form_data["id4"],form_data["id5"],form_data["id6"] ]
     your_score=evaluate_score(userAnswers,correctLetters)[0]
     your_scorePerc=evaluate_score(userAnswers,correctLetters)[1]
@@ -111,13 +110,22 @@ def returnResults():
 @app.route("/resultsQuizG", methods=["POST"])
 def returnResultsG():
     form_data=request.form
-    correctAnswers= [form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
+    print('---request form:----')
     print(request.form)
+    correctAnswers= [form_data["Q1"],form_data["Q2"],form_data["Q3"],form_data["Q4"],form_data["Q5"],form_data["Q6"]]
     userAnswers=[form_data["id1"], form_data["id2"], form_data["id3"], form_data["id4"],form_data["id5"],form_data["id6"] ]
     your_score=evaluate_score(userAnswers,correctAnswers)[0]
     your_scorePerc=evaluate_score(userAnswers,correctAnswers)[1]
-    return render_template("resultsQuiz.html",your_score=your_score,your_scorePerc=your_scorePerc)
+    print('---userAnswers:---')
+    print(userAnswers)
+    print(' ----correct answers: ---')
+    print(correctAnswers)
+    print(' ----len user answer: ---')
+    print(len(userAnswers))
+    print(' ----len correct answers: ---')
+    print(len(correctAnswers))
+    return render_template("resultsQuizG.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 
-if "AppSL" == '__main__':
-    app.run()
+#if "AppSL" == '__main__':
+app.run(debug=True)

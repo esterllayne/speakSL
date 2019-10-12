@@ -28,17 +28,37 @@
        </header>
 </header>
 
-
 <body>
-    <div class='content'>
+  <div class='content'>
+    {% if your_scorePerc > 80 %}
+      <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. Congrats, you are an expert</b></h3>
+    {% elif your_scorePerc > 60 %}
+    <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}% - pretty good!</b></h3>
+    {% elif your_scorePerc > 40 %}
+    <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. Not terrible, not great, your knowledge is about average.</b></h3>
+    {% elif your_scorePerc > 20 %}
+    <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%, you should practice more.</b></h3>
+    {% else %}
+    <h3><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%. You should really practice more.</b></h3>
+    {% endif %}
+    <h2><b>Would you like to take another quiz?</b></h2>
+    <ul>
+        <li><a href="/quizG"> <b>Greetings and small </b>  </a></li>
+        <li><a href="/quizA"> <b>Letters</b> </a></li>
+    </ul>
+    <h2><b>Or choose where to go from the main menu:</b></h2>
+  </div>
 
-        {% if your_score|length %}
-        <p><b>Your score is: {{your_score}}. That is {{your_scorePerc}}%.</b></p>
-      {% endif %}
-      <p><b>Which quiz would you like to take?</b></p>
-      <ul>
-          <li><a href="/quizG"> <b>Greetings and small phrases</b>  </a></li>
-          <li><a href="/quizA"> <b>Greetings</b> </a></li>
-      <\ul>
-    </div>
+
+  <div class ="menuIndex">
+          <div class="content">
+           <ul>
+             <li><a href="/"> <b>Home</b>  </a></li>
+             <li><a href="/greetings"> <b>Greetings</b> </a></li>
+             <li><a href="/small" > <b>Small phrases</b> </a></li>
+             <li><a href="/alphabet"> <b>Alphabet</b> </a></li>
+             <li><a href="/quiz"><b>Quiz</b> </a></li>
+           </ul>
+         </div>
+</div>
 </body>
