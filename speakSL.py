@@ -41,7 +41,7 @@ greetingsUncovered={"Hello": "https://media.giphy.com/media/3o7TKNKOfKlIhbD3gY/g
 def evaluate_score(ansUsr,ansCorrect):
     score=0
     for i in range(len(ansUsr)):
-       if ansUsr[i].lower()==ansCorrect[i]:
+       if ansUsr[i].lower()==ansCorrect[i].lower():
            score=score+1
        else:
             score=score
@@ -128,6 +128,7 @@ def returnResultsG():
 
 
 if "AppSL" == '__main__':
-    app.run()
+app.run()
 
-#app.run(debug=True)
+# To run locally comment out the if above and uncomment below. then just run python speakSL
+# app.run(debug=True)
