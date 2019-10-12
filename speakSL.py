@@ -15,7 +15,7 @@ alphabetD={"a": "https://i.imgur.com/k01IMQh.jpg", "b":"https://i.imgur.com/i64U
 "y":"https://i.imgur.com/6qEgu6D.jpg","z":"https://i.imgur.com/h6oWvhS.jpg"}
 
 greetingsD={"Hello": "https://i.imgur.com/LaD3P7J.gif","Good Morning":"https://i.imgur.com/sX4ktUG.gif",
-"Good Afternoon":"https://i.imgur.com/U5tXIJi.gif","Good Evening":"https://i.imgur.com/yA7Bwpj.gif",
+"Good Afternoon":"https://i.imgur.com/U5tXIJi.gif","Good Evening":"https://i.imgur.com/KQmsPEY.gif",
 "Good Night":"https://i.imgur.com/yA7Bwpj.gif","Thank You!":"https://i.imgur.com/X3z7YBm.gif",
 "You're welcome!":"https://i.imgur.com/QV8Aue0.gif",
 "How Are You?":"https://i.imgur.com/tSUZYHc.gif",
