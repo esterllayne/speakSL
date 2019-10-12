@@ -128,7 +128,7 @@ def returnResultsG():
 
 
 if "AppSL" == '__main__':
-app.run()
+    app.run()
 
 # To run locally comment out the if above and uncomment below. then just run python speakSL
 # app.run(debug=True)
