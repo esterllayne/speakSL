@@ -127,5 +127,7 @@ def returnResultsG():
     return render_template("resultsQuizG.html",your_score=your_score,your_scorePerc=your_scorePerc)
 
 
-#if "AppSL" == '__main__':
-app.run(debug=True)
+if "AppSL" == '__main__':
+    app.run()
+
+#app.run(debug=True)
